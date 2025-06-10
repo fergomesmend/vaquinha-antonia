@@ -77,30 +77,89 @@
       justify-content: space-between;
       margin-top: 30px;
       flex-wrap: wrap;
+      gap: 10px;
     }
     
     .photo-box {
-      width: 18%;
+      width: calc(20% - 10px);
       margin-bottom: 15px;
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
       background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     
     .photo-box img {
       width: 100%;
-      height: auto;
+      height: 120px;
+      object-fit: cover;
       display: block;
     }
     
-    .photo-placeholder {
-      height: 120px;
+    .photo-caption {
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    /* Novos estilos para a vaquinha */
+    .progress-container {
+      margin: 30px 0;
+      background: #f1f1f1;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .progress-title {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #d6336c;
+      font-weight: bold;
+    }
+    
+    .progress-bar {
+      height: 30px;
+      background: #e0e0e0;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .progress {
+      height: 100%;
+      background: #28a745;
+      width: 25%; /* Valor inicial - ajustar conforme doações */
+      border-radius: 15px;
+      transition: width 0.5s ease;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #999;
-      background-color: #eee;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .donation-box {
+      background: #f8f9fa;
+      border: 2px solid #d6336c;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .donation-amount {
+      font-size: 28px;
+      font-weight: bold;
+      color: #d6336c;
+      margin: 10px 0;
+    }
+    
+    .donation-goal {
+      color: #666;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -128,32 +187,42 @@
       <strong>📱 Chave Pix: 18 98820-9710</strong>
     </div>
 
-    <!-- Containers para fotos -->
+    <!-- Barra de progresso da vaquinha -->
+    <div class="progress-container">
+      <div class="progress-title">Progresso da Vaquinha</div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 1%">1%</div>
+      </div>
+    </div>
+    
+    <!-- Valor arrecadado -->
+    <div class="donation-box">
+      <h3>Total Arrecadado</h3>
+      <div class="donation-amount">R$ 7.00</div>
+      <div class="donation-goal">Meta: R$ 7.000,00</div>
+    </div>
+
+    <!-- Container com fotos -->
     <div class="photo-container">
       <div class="photo-box">
-        <img src="foto carrossel 1.jpg" alt="carrossel">
-        <div class="carrossel"></div>
-        <!-- Substitua a div acima por <img src="foto1.jpg" alt="Descrição"> -->
+        <img src="foto carrossel 1.jpg" alt="Máscara">
+        <div class="Máscara">Máscara</div>
       </div>
       <div class="photo-box">
-        <img src="foto carrossel 2.jpg" alt="carrosse2">
-        <div class="carrosse2"></div>
-        <!-- Substitua a div acima por <img src="foto2.jpg" alt="Descrição"> -->
+        <img src="foto carrossel 2.jpg" alt="Funçoes do CPAP">
+        <div class="Funçoes do CPAP">Funçoes do CPAP</div>
       </div>
       <div class="photo-box">
-       <img src="foto carrossel 3.jpg" alt="carrosse3"> 
-        <div class="carrosse3"></div>
-        <!-- Substitua a div acima por <img src="foto3.jpg" alt="Descrição"> -->
+        <img src="foto carrossel 3.jpg" alt="Modelo do aparelho CPAP">
+        <div class="photo-caption">Aparelho necessário</div>
       </div>
       <div class="photo-box">
-        <img src="foto carrossel 4.jpg" alt="carrosse4"> 
-        <div class="carrosse4"></div>
-        <!-- Substitua a div acima por <img src="foto4.jpg" alt="Descrição"> -->
+        <img src="foto carrossel 4.jpg" alt="CPAP">
+        <div class="photo-caption">CPAP</div>
       </div>
       <div class="photo-box">
-         <img src="foto irmaos.jpg" alt="irmaos">
-        <div class="irmaos"></div>
-        <!-- Substitua a div acima por <img src="foto5.jpg" alt="Descrição"> -->
+        <img src="foto irmaos.jpg" alt="Família">
+        <div class="photo-caption">Família</div>
       </div>
     </div>
 
